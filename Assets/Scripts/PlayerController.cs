@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
       
         if(horizontalInput != 0){
-            spriteRenderer.flipX = horizontalInput>0;
+            //spriteRenderer.flipX = horizontalInput>0;
+            transform.localScale = new Vector3(horizontalInput < 0 ? 6 : -6, 6, 1);
         }
         animator.SetFloat("speed", Mathf.Abs(horizontalInput));
 
