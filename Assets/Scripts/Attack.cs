@@ -3,6 +3,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public Animator animator;
+    public HitboxController hitboxController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +16,7 @@ public class Attack : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             meleeAttack();
+            hitboxController.AttackMelee();
 
         }
 
